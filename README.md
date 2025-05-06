@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+## Environment Variables
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Create a `.env` file in the root of your project and define the following variables:
 
-## Available Scripts
+```
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=your_password
+DB_NAME=todo_app
+PORT=5000
+```
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## API Documentation (Swagger)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Create User (POST /user)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Description:** Create a new user account.
+![Screenshot_2025-05-06_232752](https://github.com/user-attachments/assets/7af34487-4300-4271-b637-53dc5cc63cf9)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Add Todo (POST /addtodo)
 
-### `npm run build`
+**Description:** Create a new todo item.
+![Screenshot_2025-05-06_232807](https://github.com/user-attachments/assets/4de6e5db-9a1f-4858-9522-d8198f7371a5)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. Get Users (GET /user)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Description:** Retrieve a list of all users.
+![Screenshot_2025-05-06_232851](https://github.com/user-attachments/assets/e05cf2eb-2524-4260-b656-368be252fcd4)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 4. Get Todos (GET /addtodo)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Description:** Retrieve a list of all todo items.
+![Screenshot_2025-05-06_232833](https://github.com/user-attachments/assets/f05b3a68-28f8-4333-8f86-bab8847e75e1)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Database Inspection (SQL)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+After making a `POST` request, you can inspect the database tables using the following SQL query:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sql
+SELECT * FROM users;
+SELECT * FROM todos;
+```
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
